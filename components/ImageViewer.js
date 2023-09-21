@@ -1,8 +1,8 @@
-import { Image } from "react-native";
+import { Image, StyleSheet } from "react-native";
 
 export default function ImageViewer({placeHolderImageSource}){
     return (
-        <Image source={placeHolderImageSource} style={StyleSheet.image}></Image>
+        <Image source={placeHolderImageSource} style={StyleSheet.image}/>
     );
 }
 
