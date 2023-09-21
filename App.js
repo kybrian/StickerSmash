@@ -9,6 +9,7 @@ import { useState } from "react";
 const PlaceHolderImage = require("./assets/images/background-image.png");
 
 export default function App() {
+  const [selectedImage, setSelectedImage] = useState(null);
   const pickImageAsync = async () => {
     let result = await ImagePicker.launchImageLibraryAsync({
       allowsEditing: true,
@@ -26,7 +27,10 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
-        <ImageViewer placeHolderImageSource={PlaceHolderImage} selectedImage={selectedImage} />
+        <ImageViewer
+          placeHolderImageSource={PlaceHolderImage}
+          selectedImage={selectedImage}
+        />
       </View>
       <View style={styles.footerContainer}>
         <Button
